@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Surprise😘</title>
+<style type="text/css">
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Courier New';
+	font-weight: bold;
+}
+
+button {
+	font-family: 'Courier New';
+	font-weight: bold;
+}
+
+img {
+	width: 70%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
+#alert_box_wrapper {
+	background: #000;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+#alert_box_wrapper .alert_box {
+	background: #fff;
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 40px;
+	border-radius: 10px;
+}
+
+#alert_box_wrapper .alert_box .button_wrapper {
+	margin-top: 40px;
+	display: flex;
+	justify-content: space-around;
+}
+
+#alert_box_wrapper .alert_box .button_wrapper button {
+	border: none;
+	outline: none;
+	background: #fe347e;
+	width: 40%;
+	padding: 10px;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 20px;
+}
+
+#alert_box_wrapper .alert_box .button_wrapper button.noBtn {
+	background: none;
+	color: #000;
+	box-shadow: 0 0 5px #ddd;
+}
+
+#alert_box_wrapper.none {
+	display: none;
+}
+
+#error_alert {padding-top: 20px; color: red; display: none;}
+
+#error_alert.show {display: block;}
+
+</style>
+</head>
+<body>
+
+<div id="alert_box_wrapper">
+	<div class="alert_box">
+		<h1>Do you love me Sona?🥺</h1>
+		<div class="button_wrapper">
+			<button class="yesBtn" onclick="yes()">Yes Jaan😘</button>
+			<button class="noBtn" onclick="no()">No😅</button>
+		</div>
+		<p id="error_alert">You should to click yes button🤭</p>
+	</div>
+</div>
+
+<img src="image.gif">
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+function yes() {
+	document.querySelector("#alert_box_wrapper").classList.add ('none');
+}
+
+function no() {
+	document.querySelector("#error_alert").classList.add ('show');
+	setTimeout(function() {document.querySelector("#error_alert").classList.remove("show")}, 2000);
+}
+
+</script>
